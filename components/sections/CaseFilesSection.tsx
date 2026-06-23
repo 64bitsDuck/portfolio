@@ -58,7 +58,7 @@ export default function CaseFilesSection() {
                 <div className="font-display mt-1">C, C++, Assembly</div>
               </div>
             </div>
-            <a href="#" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
+            <a href="https://github.com/64bitsDuck/lucilleos" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
               VIEW REPOSITORY
               <ArrowRightIcon className="w-3 h-3" />
             </a>
@@ -83,7 +83,7 @@ export default function CaseFilesSection() {
                 <div className="font-display mt-1">Nuxt, Vue, MySQL</div>
               </div>
             </div>
-            <a href="#" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
+            <a href="https://github.com/64bitsDuck/bereale" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
               VIEW REPOSITORY
               <ArrowRightIcon className="w-3 h-3" />
             </a>
@@ -183,7 +183,7 @@ export default function CaseFilesSection() {
                 <div className="font-display mt-1">Python, PyTorch, React</div>
               </div>
             </div>
-            <a href="#" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
+            <a href="https://github.com/64bitsDuck/helia" className="mt-8 inline-flex items-center gap-2 font-mono text-xs tracking-[0.2em] border-b border-ink pb-1 hover:border-copper hover:text-copper transition-colors interactive">
               VIEW REPOSITORY
               <ArrowRightIcon className="w-3 h-3" />
             </a>

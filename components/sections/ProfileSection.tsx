@@ -15,7 +15,7 @@ export default function ProfileSection() {
           <div className="relative w-full h-[300px] border border-ink/30 overflow-hidden bg-paper-bright">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="https://picsum.photos/seed/pierrefiser_portrait/600/400.jpg" 
+              src="/pierre_fiser_picture.jpg" 
               className="w-full h-full object-cover" 
               style={{ filter: "grayscale(100%) contrast(1.1) sepia(0.2)" }} 
               alt="Pierre Fiser"

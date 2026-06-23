@@ -19,21 +19,28 @@ export default function TransmissionSection() {
           </h2>
 
           <div className="mt-12 space-y-6 max-w-2xl">
-            <a href="mailto:pierre.fiser@example.com" className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
+            <a href="mailto:pierrefiser@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
               <div>
                 <div className="font-mono text-[10px] tracking-[0.2em] text-ink/40 mb-1">EMAIL</div>
-                <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">pierre.fiser@example.com</span>
+                <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">pierrefiser@gmail.com</span>
               </div>
               <ArrowRightIcon className="w-5 h-5 text-ink/40 group-hover:text-copper transition-colors" strokeWidth={1.5} />
             </a>
-            <a href="#" className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
+            <a href="https://github.com/64bitsDuck" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
               <div>
                 <div className="font-mono text-[10px] tracking-[0.2em] text-ink/40 mb-1">GITHUB</div>
-                <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">@pierrefiser</span>
+                <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">@64bitsDuck</span>
               </div>
               <ArrowRightIcon className="w-5 h-5 text-ink/40 group-hover:text-copper transition-colors" strokeWidth={1.5} />
             </a>
-            <a href="#" download className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
+            <a href="https://www.linkedin.com/in/pierre-fiser-8b7308364/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
+              <div>
+                <div className="font-mono text-[10px] tracking-[0.2em] text-ink/40 mb-1">LINKEDIN</div>
+                <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">Pierre Fiser</span>
+              </div>
+              <ArrowRightIcon className="w-5 h-5 text-ink/40 group-hover:text-copper transition-colors" strokeWidth={1.5} />
+            </a>
+            <a href="/resume.pdf" download className="flex items-center justify-between border-b border-ink/20 pb-4 group interactive">
               <div>
                 <div className="font-mono text-[10px] tracking-[0.2em] text-ink/40 mb-1">DOSSIER</div>
                 <span className="font-display text-xl md:text-2xl group-hover:text-copper transition-colors">Download Resume (PDF)</span>
