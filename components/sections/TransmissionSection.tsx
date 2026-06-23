@@ -55,7 +55,7 @@ export default function TransmissionSection() {
             <div>
               <div className="font-mono text-[10px] tracking-[0.2em] text-ink/40 mb-2">AVAILABILITY</div>
               <p className="font-serif italic text-xl text-ink-soft">
-                Currently open to internship opportunities and collaborative projects for Summer 2026.
+                Currently open to collaborative projects for Summer 2026.
               </p>
             </div>
             <div className="pt-6 border-t border-dashed border-ink/20">
