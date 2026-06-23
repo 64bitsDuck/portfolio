@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #e8e0cc;
+  --color-paper-bright: #f0e9d6;
+  --color-paper-dim: #ddd3ba;
+  --color-ink: #1c1b18;
+  --color-ink-soft: #3a3530;
+  --color-copper: #b45a1f;
+  --color-copper-light: #d97834;
+  --color-rust: #8b3a1a;
+  --color-olive: #6b6a3a;
+  --color-muted: #8a8478;
+
+  --font-display: var(--font-space-grotesk), sans-serif;
+  --font-serif: var(--font-fraunces), serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+}
+
+:root {
+  --paper: #e8e0cc;
+  --paper-bright: #f0e9d6;
+  --ink: #1c1b18;
+  --ink-soft: #3a3530;
+  --copper: #b45a1f;
+  --copper-light: #d97834;
+  --rust: #8b3a1a;
+  --olive: #6b6a3a;
+  --muted: #8a8478;
+}
+
+* { 
+  -webkit-font-smoothing: antialiased; 
+  box-sizing: border-box; 
+}
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-space-grotesk), sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Custom Cursor */
+@media (pointer: fine) {
+  body, a, button, input, textarea, .interactive { cursor: none; }
+  .cursor-dot, .cursor-ring {
+    position: fixed; top: 0; left: 0;
+    pointer-events: none; z-index: 9999;
+    will-change: transform;
+  }
+  .cursor-dot {
+    width: 4px; height: 4px;
+    background: var(--copper);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    width: 32px; height: 32px;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, border-color 0.2s, background-color 0.2s;
+  }
+  .cursor-ring.hover {
+    width: 48px; height: 48px;
+    border-color: var(--copper);
+    background: rgba(180, 90, 31, 0.1);
+  }
+  .cursor-ring.dark { border-color: var(--paper); }
+  .cursor-ring.dark.hover { 
+    border-color: var(--copper-light); 
+    background: rgba(217, 120, 52, 0.15); 
+  }
+}
+@media (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--ink-soft); border: 2px solid var(--paper); }
+::selection { background: var(--copper); color: var(--paper); }
+
+
+/* Blueprint grid */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(28,27,24,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28,27,24,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px var(--ink);
+  color: transparent;
+}
+
+/* PCB section */
+.pcb-bg {
+  background-color: #14130f;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(180,90,31,0.05) 0%, transparent 70%),
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+
+.tech-module { transition: all 0.3s cubic-bezier(0.2,0.8,0.2,1); }
+.tech-module:hover { background: rgba(180,90,31,0.1); border-color: var(--copper); transform: translateY(-2px); }
+.tech-module.active { background: rgba(180,90,31,0.15); border-color: var(--copper); }
+.tech-module:hover .pin { background: var(--copper); }
+
+/* Hex cell */
+.hex-cell { transition: background 0.15s, color 0.15s; }
+.hex-cell:hover { background: var(--copper) !important; color: var(--paper) !important; }
+
+/* Index overlay */
+.index-overlay { backdrop-filter: blur(12px); background: rgba(20,19,15,0.85); }
+
+/* 3D exploded */
+.preserve-3d { transform-style: preserve-3d; }
+
+/* Side nav */
+.side-nav-link { transition: opacity 0.2s; }
+.side-nav-link.active { opacity: 1 !important; }
+.side-nav-link.active .tick { background: var(--copper) !important; width: 3rem !important; }
+.side-nav-link.active .roman { color: var(--copper) !important; }
+
+/* Animations */
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+@keyframes blink { 50% { opacity: 0; } }
+.blink { animation: blink 1s step-end infinite; }
+
+body.nav-open { overflow: hidden; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--copper);
+  outline-offset: 4px;
+}
+
+/* Timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  z-index: 2;
+}
+.timeline-item:hover::before {
+  background: var(--copper);
+  border-color: var(--copper);
+}
+
+@media (min-width: 768px) {
+  .timeline-item.md\:pr-1\/2::before {
+    left: auto;
+    right: -6px; /* center between cols on md */
+  }
+}
